@@ -12,6 +12,8 @@ defmodule CommunityWeb.Router do
       schema: CommunityWeb.Schema,
       interface: :simple,
       context: %{pubsub: CommunityWeb.Endpoint}
+
+    forward "/", Absinthe.Plug, schema: CommunityWeb.Schema
   end
 
   scope "/api", CommunityWeb do
